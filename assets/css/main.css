@@ -1,5 +1,19 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@theme {
+    --color-pausecoffee: #D14646;
+    --color-pausecoffeedark: #721C1C;
+    --color-dark: #373737;
+    --color-bleu: #007BFF;
+    --color-blanc: #F7F0F0;
+    --font-inter: "Inter";
+}
 
 html {
-    background: #202020;
+    background: #161616;
 }

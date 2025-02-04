@@ -10,7 +10,7 @@
         <PauseCoffee class="h-12" />
       </div>
 
-      <h2 class="text-2xl font-semibold text-center mb-6 text-[#D14646]">
+      <h2 class="text-2xl font-semibold text-center mb-6 text-pausecoffee">
         Gagnez 1 an de café gratuit !
       </h2>
       <p class="text-sm text-center mb-6 text-gray-600">
@@ -23,45 +23,45 @@
         <div class="mb-4">
           <label
             for="firstName"
-            class="block text-sm font-medium text-[#003D44]"
+            class="block text-sm font-medium text-pausecoffee"
             >Prénom</label
           >
           <input
             type="text"
             id="firstName"
             v-model="firstName"
-            class="mt-1 block w-full px-4 py-2 border border-[#003D44] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#003D44]"
+            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
             required
           />
         </div>
         <div class="mb-4">
-          <label for="lastName" class="block text-sm font-medium text-[#003D44]"
+          <label for="lastName" class="block text-sm font-medium text-pausecoffee"
             >Nom</label
           >
           <input
             type="text"
             id="lastName"
             v-model="lastName"
-            class="mt-1 block w-full px-4 py-2 border border-[#003D44] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#003D44]"
+            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
             required
           />
         </div>
         <div class="mb-6">
-          <label for="email" class="block text-sm font-medium text-[#003D44]"
+          <label for="email" class="block text-sm font-medium text-pausecoffee"
             >Email</label
           >
           <input
             type="email"
             id="email"
             v-model="email"
-            class="mt-1 block w-full px-4 py-2 border border-[#003D44] rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#003D44]"
+            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
             required
           />
         </div>
         <div class="flex justify-center">
           <button
             type="submit"
-            class="px-6 py-3 bg-[#003D44] text-white font-semibold rounded-lg hover:bg-[#005C64] focus:outline-none focus:ring-2 focus:ring-[#003D44]"
+            class="px-6 py-3 bg-pausecoffee text-white font-semibold rounded-lg hover:bg-pausecoffeedark focus:outline-none focus:ring-2 focus:ring-pausecoffee"
           >
             Envoyer
           </button>
@@ -84,7 +84,7 @@ export default {
     submitForm() {
       // Traitez ici les données du formulaire
       console.log("Form submitted", this.firstName, this.lastName, this.email);
-      this.$router.push("/landing"); // Redirection vers la landing page
+      this.$router.push("/home"); // Redirection vers la landing page
     },
   },
 };
@@ -93,7 +93,7 @@ export default {
 <style scoped>
 
 .background-image {
-  background-image: url('/public/img/background-maxicoffe.jpg');
+  background-image: url('/public/img/background-pausecoffee.jpg');
   background-position: center;
   background-size: cover;
 }
