@@ -1,19 +1,53 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body {
-  font-family: 'Inter', sans-serif;
-}
-
 @theme {
     --color-pausecoffee: #D14646;
     --color-pausecoffeedark: #721C1C;
+    --color-noir: #161616;
+    --color-noir25: #252525;
     --color-dark: #373737;
-    --color-bleu: #007BFF;
+    --color-disabled: #9C9C9C;
     --color-blanc: #F7F0F0;
+    --color-bleu: #007BFF;
+    --color-negative: #D43C3C;
     --font-inter: "Inter";
 }
 
 html {
     background: #161616;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    @apply text-blanc text-5xl font-bold; /* 3rem = text-5xl */
+  }
+  
+  h2 {
+    @apply text-blanc text-4xl font-bold; /* 2.25rem = text-4xl */
+  }
+  
+  h3 {
+    @apply text-blanc text-3xl font-bold; /* 1.875rem = text-3xl */
+  }
+  
+  h4 {
+    @apply text-blanc text-2xl font-bold; /* 1.5rem = text-2xl */
+  }
+  
+  h5 {
+    @apply text-blanc text-xl font-bold; /* 1.25rem = text-xl */
+  }
+  
+  h6 {
+    @apply text-blanc text-lg font-bold; /* 1.125rem = text-lg */
+  }
+
+  p {
+    @apply text-blanc text-base font-normal; /* 1rem = text-base */
+  }
+
+button {
+    @apply bg-transparent border-bleu border-2 hover:bg-bleu text-blanc px-6 py-3 rounded-full;
+    transition: all 0.3s;
 }

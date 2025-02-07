@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-transparent sticky top-0 mx-auto h-8 py-12 px-12 flex justify-between items-center">
+  <header class="bg-gradient-to-b from-noir to-transparent sticky top-0 mx-auto h-8 py-12 px-12 flex justify-between items-center">
     <a href="/home"><CybGuardLogo/></a>
     <div class="hidden md:flex space-x-8">
       <a href="#" class="text-blanc hover:text-bleu">Features</a>
