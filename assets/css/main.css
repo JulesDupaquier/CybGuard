@@ -1,53 +1,51 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @theme {
-    --color-pausecoffee: #D14646;
-    --color-pausecoffeedark: #721C1C;
-    --color-noir: #161616;
-    --color-noir25: #252525;
-    --color-dark: #373737;
-    --color-disabled: #9C9C9C;
-    --color-blanc: #F7F0F0;
-    --color-bleu: #007BFF;
-    --color-negative: #D43C3C;
-    --font-inter: "Inter";
+  --color-pausecoffee: #D14646;
+  --color-pausecoffeedark: #721C1C;
+  --color-noir: #161616;
+  --color-noir25: #252525;
+  --color-dark: #373737;
+  --color-disabled: #9C9C9C;
+  --color-blanc: #F7F0F0;
+  --color-vert: #28A745;
+  --color-negative: #D43C3C;
+  --font-inter: "Inter";
 }
 
 html {
-    background: #161616;
-    font-family: 'Inter', sans-serif;
+  background: var(--color-noir);
+  font-family: 'Inter', sans-serif;
 }
 
 h1 {
-    @apply text-blanc text-5xl font-bold; /* 3rem = text-5xl */
-  }
-  
-  h2 {
-    @apply text-blanc text-4xl font-bold; /* 2.25rem = text-4xl */
-  }
-  
-  h3 {
-    @apply text-blanc text-3xl font-bold; /* 1.875rem = text-3xl */
-  }
-  
-  h4 {
-    @apply text-blanc text-2xl font-bold; /* 1.5rem = text-2xl */
-  }
-  
-  h5 {
-    @apply text-blanc text-xl font-bold; /* 1.25rem = text-xl */
-  }
-  
-  h6 {
-    @apply text-blanc text-lg font-bold; /* 1.125rem = text-lg */
-  }
+  @apply text-blanc font-bold text-4xl sm:text-5xl lg:text-6xl;
+}
 
-  p {
-    @apply text-blanc text-base font-normal; /* 1rem = text-base */
-  }
+h2 {
+  @apply text-blanc font-bold text-3xl sm:text-4xl lg:text-5xl;
+}
+
+h3 {
+  @apply text-blanc font-bold text-2xl sm:text-3xl lg:text-4xl;
+}
+
+p {
+  @apply text-blanc text-base sm:text-lg lg:text-xl;
+}
 
 button {
-    @apply bg-transparent border-bleu border-2 hover:bg-bleu text-blanc px-6 py-3 rounded-full;
-    transition: all 0.3s;
+  @apply bg-transparent border-vert border-2 hover:bg-vert hover:text-noir text-blanc px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-full transition-all cursor-pointer;
+}
+
+.app-btn {
+  @apply bg-transparent border-vert border-2 text-blanc hover:bg-vert hover:text-noir px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-xl transition-all cursor-pointer;
+}
+
+/* Hover pour les liens */
+a {
+  @apply text-blanc transition-all duration-300 ease-in-out;
+}
+a:hover {
+  color: var(--color-vert); /* Passe au vert au survol */
 }

@@ -101,7 +101,7 @@ export default {
           alt="Photo de profil"
           class="w-16 h-16 rounded-full mb-4 mx-auto"
         />
-        <h4>{{ review.name }}</h4>
+        <h4 class="text-blanc">{{ review.name }}</h4>
         <h7 class="text-disabled">{{ review.work }}</h7>
         <p class="mt-4">"{{ review.feedback }}"</p>
       </div>

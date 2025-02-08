@@ -1,109 +1,75 @@
 <template>
-  <main
-    class="background-image min-h-screen flex justify-center items-center bg-cover bg-center"
-  >
-    <div
-      class="bg-white bg-opacity-75 p-8 rounded-lg shadow-lg w-full max-w-lg sm:w-full sm:max-w-xs"
+  <Header />
+
+  <!-- Section Vidéo -->
+  <section class="relative w-full h-screen">
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
     >
-      <!-- Logo -->
-      <div class="flex justify-center mb-6">
-        <PauseCoffee class="h-12" />
-      </div>
+      <source src="/video/Background_Video_CybGuard.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-      <h2 class="text-2xl font-semibold text-center mb-6 text-pausecoffee">
-        Gagnez 1 an de café gratuit !
-      </h2>
-      <p class="text-sm text-center mb-6 text-gray-600">
-        Tentez de remporter 1 an de café ! Veuillez remplir les champs ci-dessous pour nous transmettre vos
-        informations. Ces données sont essentielles pour continuer votre inscription.
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center z-20">
+      <h1>
+        <span class="text-negative">Attention</span>, vous auriez pu exposer vos données au monde entier.
+      </h1>
+      <p>
+        CybGuard peut vous aider à sécuriser vos données.
       </p>
-
-      <!-- Formulaire -->
-      <form @submit.prevent="submitForm">
-        <div class="mb-4">
-          <label
-            for="firstName"
-            class="block text-sm font-medium text-pausecoffee"
-            >Prénom</label
-          >
-          <input
-            type="text"
-            id="firstName"
-            v-model="firstName"
-            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
-            required
-          />
-        </div>
-        <div class="mb-4">
-          <label for="lastName" class="block text-sm font-medium text-pausecoffee"
-            >Nom</label
-          >
-          <input
-            type="text"
-            id="lastName"
-            v-model="lastName"
-            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
-            required
-          />
-        </div>
-        <div class="mb-6">
-          <label for="email" class="block text-sm font-medium text-pausecoffee"
-            >Email</label
-          >
-          <input
-            type="email"
-            id="email"
-            v-model="email"
-            class="mt-1 block w-full px-4 py-2 border border-pausecoffee rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-pausecoffee"
-            required
-          />
-        </div>
-        <div class="flex justify-center">
-          <button
-            type="submit"
-            class="px-6 py-3 bg-pausecoffee text-white font-semibold rounded-lg hover:bg-pausecoffeedark focus:outline-none focus:ring-2 focus:ring-pausecoffee"
-          >
-            Envoyer
-          </button>
-        </div>
-      </form>
+      <div class="space-x-4">
+        <button>Découvrez CybGuard</button>
+        <NuxtLink to="/download">
+          <button>Téléchargez l'application</button>
+        </NuxtLink>
+      </div>
     </div>
-  </main>
+
+    <!-- Icône Flèche -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+      <a href="#features"
+        class="flex items-center justify-center w-12 h-12 border-blue border rounded-full hover:bg-blue hover:text-noir transition duration-300 animate-bounce"
+        aria-label="Descendre à la section suivante"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7l-7 -7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section Fonctionnalités -->
+  <section id="features" class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2>Pourquoi choisir CybGuard ?</h2>
+      <p>Découvrez comment CybGuard peut protéger vos données et vous aider à adopter de bonnes pratiques en cybersécurité.</p>
+
+      <!-- Grille des fonctionnalités -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
+        <!-- Fonctionnalité -->
+        <div class="bg-noir25 p-[20px] rounded-lg shadow-md">
+          <h3>🔑 Gestionnaire de mots de passe</h3>
+          <p>Générez, stockez et gérez vos mots de passe en toute sécurité.</p>
+        </div>
+
+        <!-- Autres fonctionnalités... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Avis -->
+  <section id="avis" class="place-items-center py-[60px]">
+    <h2>Des utilisateurs en rêvent</h2>
+    <AvisCarousel />
+    <NuxtLink to="/feedback-form">
+      <button>Donnez votre avis !</button>
+    </NuxtLink>
+  </section>
+
+  <!-- Footer -->
+  <Footer />
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      firstName: "",
-      lastName: "",
-      email: "",
-    };
-  },
-  methods: {
-    submitForm() {
-      // Traitez ici les données du formulaire
-      console.log("Form submitted", this.firstName, this.lastName, this.email);
-      this.$router.push("/home"); // Redirection vers la landing page
-    },
-  },
-};
-</script>
-
-<style scoped>
-
-.background-image {
-  background-image: url('/public/img/background-pausecoffee.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-@media (max-width: 640px) {
-  .sm\:w-full {
-    width: 100%;
-  }
-  .sm\:max-w-xs {
-    max-width: 100%;
-  }
-}
-</style>
