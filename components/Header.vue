@@ -11,8 +11,9 @@
     <nav class="hidden md:flex items-center space-x-8">
       <NuxtLink href="/protection" class="hover:text-green">Protection</NuxtLink>
       <NuxtLink href="/mentions-legales" class="hover:text-green">Mentions Légales</NuxtLink>
+      
       <!-- Bouton Télécharger l'App -->
-      <NuxtLink class="flex items-center app-btn">
+      <NuxtLink to="/download" class="btn btn-header flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-5 h-5 mr-2"
@@ -35,7 +36,7 @@
     <div class="md:hidden">
       <!-- Bouton Menu Burger -->
       <button @click="toggleMenu" class="focus:outline-none text-blanc">
-        <!-- Nouvelle icône menu burger -->
+        <!-- Icône menu burger -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-8 h-8"
@@ -57,7 +58,10 @@
     <div
       v-if="isMenuOpen"
       @click.self.prevent.stop="closeMenu"
-      class="fixed inset-0 bg-black bg-opacity-50 z-[49] transition-opacity duration-300 ease-in-out md:hidden"
+      class="
+        fixed inset-0 bg-black bg-opacity-50 z-[49]
+        transition-opacity duration-300 ease-in-out md:hidden
+      "
     ></div>
 
     <!-- Menu Ouvrant Mobile -->
@@ -71,7 +75,7 @@
     >
       <!-- Bouton Fermer -->
       <button @click="closeMenu" class="absolute top-6 right-6 text-blanc">
-        <!-- Nouvelle icône "fermer" -->
+        <!-- Icône "fermer" -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-8 h-8"
@@ -89,11 +93,21 @@
       </button>
 
       <!-- Liens du Menu -->
-      <NuxtLink @click.native="closeMenu" href="/protection" class="text-blanc hover:text-green text-xl">Protection</NuxtLink>
-      <NuxtLink @click.native="closeMenu" href="/mentions-legales" class="text-blanc hover:text-green text-xl">Mentions Légales</NuxtLink>
+      <NuxtLink @click.native="closeMenu" href="/protection" class="text-blanc hover:text-green text-xl">
+        Protection
+      </NuxtLink>
+      <NuxtLink @click.native="closeMenu" href="/mentions-legales" class="text-blanc hover:text-green text-xl">
+        Mentions Légales
+      </NuxtLink>
 
       <!-- Bouton Télécharger l'App dans le menu mobile -->
-      <NuxtLink @click.native="closeMenu" class="flex items-center app-btn">
+      <NuxtLink
+        @click.native="closeMenu"
+        to="/download"
+        class="
+          btn btn-header flex items-center
+        "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-5 h-5 mr-2"

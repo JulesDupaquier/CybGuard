@@ -3,7 +3,7 @@
     <img
       :src="quishingImage"
       alt="Infographie Quishing"
-      class="w-full h-auto max-w-[400px] mx-auto"
+      class="w-[350px] h-auto max-w-[400px] mx-auto"
     />
   </div>
 </template>

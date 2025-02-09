@@ -45,19 +45,32 @@ section {
 }
 
 
-/* Boutons - Classe unique */
-.btn {
-  @apply border-2 px-6 py-3 font-semibold transition-all cursor-pointer rounded-full; /* Style de base avec coins arrondis */
+/* Style global pour tous les boutons */
+button, .btn {
+  @apply px-4 py-3 font-semibold rounded-lg transition-all border-2 cursor-pointer;
 }
 
-.btn:hover {
-  @apply hover:bg-blanc hover:text-noir; /* Effet au survol par défaut */
+
+/* Bouton principal (exemple : action principale) */
+.btn-primary {
+  @apply bg-transparent border-blanc text-blanc hover:border-vert hover:text-vert hover:bg-transparent;
 }
 
-/* Bouton spécifique : Télécharger l'application */
-.btn-download {
-  @apply border-vert text-vert hover:bg-vert hover:text-white; /* Contour vert et effet au survol */
+/* Bouton secondaire (exemple : téléchargement) */
+.btn-secondary {
+  @apply bg-vert hover:bg-blanc text-blanc hover:text-noir border-vert hover:border-noir;
 }
+
+/* Bouton danger (exemple : actions négatives) */
+.btn-danger {
+  @apply bg-negative text-white border-negative hover:bg-negative;
+}
+
+/* Bouton spécifique au header */
+.btn-header {
+  @apply bg-transparent hover:bg-blanc text-blanc hover:text-noir border-vert hover:border-noir;
+}
+
 
 /* Cards */
 .card {
