@@ -1,11 +1,9 @@
 @import "tailwindcss";
 
+/* Thème de couleurs */
 @theme {
-  --color-pausecoffee: #D14646;
-  --color-pausecoffeedark: #721C1C;
   --color-noir: #161616;
   --color-noir25: #252525;
-  --color-dark: #373737;
   --color-disabled: #9C9C9C;
   --color-blanc: #F7F0F0;
   --color-vert: #28A745;
@@ -13,39 +11,69 @@
   --font-inter: "Inter";
 }
 
+/* Styles globaux */
 html {
   background: var(--color-noir);
   font-family: 'Inter', sans-serif;
 }
 
+/* Titres */
 h1 {
-  @apply text-blanc font-bold text-4xl sm:text-5xl lg:text-6xl;
+  @apply text-blanc font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight;
 }
 
 h2 {
-  @apply text-blanc font-bold text-3xl sm:text-4xl lg:text-5xl;
+  @apply text-blanc font-bold text-3xl sm:text-4xl lg:text-5xl mb-6;
 }
 
 h3 {
-  @apply text-blanc font-bold text-2xl sm:text-3xl lg:text-4xl;
+  @apply text-blanc font-bold text-base; /* Taille réduite pour les cards */
 }
 
+/* Paragraphes */
 p {
-  @apply text-blanc text-base sm:text-lg lg:text-xl;
+  @apply text-blanc text-base sm:text-lg lg:text-xl leading-relaxed;
 }
 
-button {
-  @apply bg-transparent border-vert border-2 hover:bg-vert hover:text-noir text-blanc px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-full transition-all cursor-pointer;
+.card p {
+  @apply text-disabled text-sm; /* Taille réduite pour les descriptions dans les cards */
 }
 
-.app-btn {
-  @apply bg-transparent border-vert border-2 text-blanc hover:bg-vert hover:text-noir px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-xl transition-all cursor-pointer;
+/* Espacement entre les sections */
+section {
+  padding: 120px 0; /* Padding vertical augmenté */
 }
 
-/* Hover pour les liens */
+
+/* Boutons - Classe unique */
+.btn {
+  @apply border-2 px-6 py-3 font-semibold transition-all cursor-pointer rounded-full; /* Style de base avec coins arrondis */
+}
+
+.btn:hover {
+  @apply hover:bg-blanc hover:text-noir; /* Effet au survol par défaut */
+}
+
+/* Bouton spécifique : Télécharger l'application */
+.btn-download {
+  @apply border-vert text-vert hover:bg-vert hover:text-white; /* Contour vert et effet au survol */
+}
+
+/* Cards */
+.card {
+  @apply bg-noir25 p-[20px] rounded-lg shadow-md text-center transition-transform transform hover:scale-[1.05] hover:shadow-lg;
+}
+
+/* Liens (hover) */
 a {
   @apply text-blanc transition-all duration-300 ease-in-out;
 }
+
 a:hover {
   color: var(--color-vert); /* Passe au vert au survol */
+}
+
+/* Icône du menu déroulant (arrondi) */
+.menu-icon {
+  @apply w-12 h-12 flex items-center justify-center rounded-full border border-blanc hover:bg-blanc hover:text-noir transition-all;
 }

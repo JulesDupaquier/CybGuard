@@ -4,7 +4,7 @@
   >
     <!-- Logo -->
     <NuxtLink href="/">
-      <CybGuardLogo />
+      <Logo />
     </NuxtLink>
 
     <!-- Menu Desktop -->
@@ -64,7 +64,7 @@
     <div
       :class="{ 'translate-x-full': !isMenuOpen, 'translate-x-0': isMenuOpen }"
       class="
-        fixed top-0 right-0 w-[70%] h-full bg-noir25 shadow-lg z-[50]
+        fixed top-0 right-0 w-[70%] h-full bg-noir shadow-lg z-[50]
         flex flex-col justify-center items-center py-8 px-6 space-y-6
         transform transition-transform duration-300 ease-in-out md:hidden
       "
