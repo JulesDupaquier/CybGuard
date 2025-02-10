@@ -43,39 +43,36 @@
       <!-- Boutons -->
       <div class="mt-6 flex flex-wrap justify-center gap-4">
         <button class="btn btn-primary">Découvrez CybGuard</button>
-        <NuxtLink to="/download">
-          <button class="btn btn-secondary">Téléchargez l'application</button>
+        <NuxtLink to="/waitlist">
+          <button class="btn btn-secondary">S'inscrire à la liste d'attente</button>
         </NuxtLink>
       </div>
     </div>
 
-    <!-- Icône Flèche -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
-      <a
-        href="#presentation"
-        class="menu-icon border-green"
-        aria-label="Descendre à la section suivante"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-full h-full"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M19 9l-7 7l-7 -7"
-          />
-        </svg>
-      </a>
-    </div>
+<!-- Icône Flèche -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+  <a
+    href="#about"
+    class="menu-icon border-2 border-green rounded-full p-2 animate-bounce"
+    aria-label="Descendre à la section suivante"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-6 h-6 text-green"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7l-7 -7" />
+    </svg>
+  </a>
+</div>
+
   </section>
 
   <!-- Section About Jules -->
-  <section id="about-jules" class="py-16 bg-noir">
+  <section id="about" class="py-16 bg-noir">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
       <!-- Texte explicatif à gauche -->
       <div class="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
@@ -98,7 +95,7 @@
   </section>
 
   <!-- Section About Quishing -->
-  <section id="presentation" class="py-16">
+  <section id="quishing" class="py-16">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
       <!-- Infographie (Quishing.vue) à gauche -->
       <div class="w-full md:w-1/2 mb-8 md:mb-0">
@@ -107,7 +104,7 @@
 
       <!-- Texte explicatif à droite -->
       <div class="w-full md:w-1/2 text-center md:text-left">
-        <h2 class="text-2xl text-end font-bold text-blanc mb-4">
+        <h2 class="text-2xl font-bold text-blanc mb-4">
           Le Quishing ?
         </h2>
         <p class="text-lg text-blanc leading-relaxed text-justify">

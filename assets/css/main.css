@@ -23,11 +23,11 @@ h1 {
 }
 
 h2 {
-  @apply text-blanc font-bold text-3xl sm:text-4xl lg:text-5xl mb-6;
+  @apply text-vert font-bold text-2xl sm:text-3xl lg:text-4xl mb-4; /* Taille réduite et couleur verte */
 }
 
 h3 {
-  @apply text-blanc font-bold text-base; /* Taille réduite pour les cards */
+  @apply text-blanc font-bold text-lg mb-2; /* Taille réduite pour les sous-titres */
 }
 
 /* Paragraphes */
@@ -44,12 +44,10 @@ section {
   padding: 120px 0; /* Padding vertical augmenté */
 }
 
-
 /* Style global pour tous les boutons */
 button, .btn {
   @apply px-4 py-3 font-semibold rounded-lg transition-all border-2 cursor-pointer;
 }
-
 
 /* Bouton principal (exemple : action principale) */
 .btn-primary {
@@ -70,7 +68,6 @@ button, .btn {
 .btn-header {
   @apply bg-transparent hover:bg-blanc text-blanc hover:text-noir border-vert hover:border-noir;
 }
-
 
 /* Cards */
 .card {

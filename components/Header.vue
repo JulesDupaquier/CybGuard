@@ -12,8 +12,8 @@
       <NuxtLink href="/protection" class="hover:text-green">Protection</NuxtLink>
       <NuxtLink href="/mentions-legales" class="hover:text-green">Mentions Légales</NuxtLink>
       
-      <!-- Bouton Télécharger l'App -->
-      <NuxtLink to="/download" class="btn btn-header flex items-center">
+      <!-- Bouton S'inscrire à la liste d'attente -->
+      <NuxtLink to="/waitlist" class="btn btn-header flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="w-5 h-5 mr-2"
@@ -22,13 +22,14 @@
           stroke="currentColor"
           stroke-width="2"
         >
+          <!-- Icône représentant une file d'attente -->
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M12 4v12m0 0l-4-4m4 4l4-4m-4 4V4m0 16h8m-8 0H4"
+            d="M16 12h4m-2 -2v4m-6 -6v10m-4 -10v10m-4 -6v6"
           />
         </svg>
-        Télécharger l'App
+        S'inscrire à la liste d'attente
       </NuxtLink>
     </nav>
 
@@ -93,17 +94,17 @@
       </button>
 
       <!-- Liens du Menu -->
-      <NuxtLink @click.native="closeMenu" href="/protection" class="text-blanc hover:text-green text-xl">
+      <NuxtLink @click.native="closeMenu" to="/protection" class="text-blanc hover:text-green text-xl">
         Protection
       </NuxtLink>
-      <NuxtLink @click.native="closeMenu" href="/mentions-legales" class="text-blanc hover:text-green text-xl">
+      <NuxtLink @click.native="closeMenu" to="/legal" class="text-blanc hover:text-green text-xl">
         Mentions Légales
       </NuxtLink>
 
-      <!-- Bouton Télécharger l'App dans le menu mobile -->
+      <!-- Bouton S'inscrire à la liste d'attente dans le menu mobile -->
       <NuxtLink
         @click.native="closeMenu"
-        to="/download"
+        to="/waitlist"
         class="
           btn btn-header flex items-center
         "
@@ -116,13 +117,14 @@
           stroke="currentColor"
           stroke-width="2"
         >
+          <!-- Icône représentant une file d'attente -->
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M12 4v12m0 0l-4-4m4 4l4-4m-4 4V4m0 16h8m-8 0H4"
+            d="M16 12h4m-2 -2v4m-6 -6v10m-4 -10v10m-4 -6v6"
           />
         </svg>
-        Télécharger l'App
+        S'inscrire à la liste d'attente
       </NuxtLink>
     </div>
   </header>
